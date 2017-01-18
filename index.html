@@ -3,170 +3,298 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>GeoApp 0.1</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="/demo/img/map.png" />
+      <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/ol.css" />
+    <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/modernizr.js"></script>
+    <script src="js/ol3/ol-debug.js"></script>
+    <script src="js/proj4js-2.3.15/dist/proj4.js"></script>
   </head>
   <body>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 medium-push-2 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 medium-pull-2 columns">
-              <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
-          </div>
-        </div>
-      </div>
-    </div>
+<style type="text/css">
+.off-canvas-list,.left-submenu, .right-submenu{
+    height:100%;   
+}
+  input[type="text"]{
+    height: 50px;
+    padding-right: 40px;
+    padding-left: 50px;
+    margin:1px 1px 1px 1px;
+  }
 
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
+ #searchButton {
+  font-size: 30px;
+  position: relative;
+  float: top;
+  width: 75px;
+  height: 75px;
+  top: -45px;
+  left: 310px;
+  color: #cccccc;
+}
 
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
-        
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
-                </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>     
+ #menuButton {
+  font-size: 30px;
+  position: relative;
+  float: top;
+  width: 75px;
+  height: 75px;
+  top: -45px;
+  left: -10px;
+  color: #cccccc;
+}
 
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
-        </div>
-      </div>
-    </div>
-    
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
+ #routingButton{
+  font-size: 30px;
+  position: relative;
+  float: top;
+  width: 75px;
+  height: 75px;
+  top: -45px;
+  left: 230px;
+  color: #cccccc;
+}
+</style>
+<div>
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+    <a hidden class="left-off-canvas-toggle" href="#" >Menu</a>
+    <a hidden class="right-off-canvas-toggle" href="#" >Menu</a>
+
+    <!-- Off Canvas Menu -->
+    <aside class="left-off-canvas-menu">
+                <!-- whatever you want goes here -->
+                <ul class="off-canvas-list">
+                  <li><label>Base Layer Panel</label></li>
+                  <!-- Base Layers -->
+                  <li class="row collapse">
+                    <div class="panel radius defaultLayer" id="defaultLayer">
+                    <div class="row collapse">
+                        <input checked type="radio" name="base" class="checkBase" id="layerMuni" data-baselayer="coastline_greece" data-tooltip aria-haspopup="true" class="has-tip" title="Check me to activate our own custom background!">
+                        Bare Background
+                      </div>
+                      <div class="row collapse">
+                        <input type="radio" name="base" class="checkBase" id="layerOsm" data-baselayer="OSM" data-tooltip aria-haspopup="true" class="has-tip" title="Check me to activate Open Street Maps Background!">
+                        Open Street Maps
+                      </div>
+                    </div>
+                  </li>
+                  <!-- POI SELECT Panel -->
+                  <li class="has-submenu"><a href="#" data-tooltip aria-haspopup="true" class="has-tip" title="In this area you can activate points-of-interest layers">Load POI</a>
+                    <ul class="left-submenu">
+                      <li class="back"><a href="#">Back</a></li>
+                      <li><label>POI by Category</label></li>
+                      <li>
+                        <div class="panel radius">
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-poi='bus_stop' id="layerDEFlayer1">POI 1
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-poi='bus_stop'/>
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-poi='CAFE' id="layerDEFlayer1">POI 2
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-poi='cafe'/>
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-poi='layer_1' id="layerDEFlayer1">POI 3
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-poi='PoiRodos'/>
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-poi='layer_2' id="layerDEFlayer1">POI 4
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-poi='PoiRodos'/>
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-poi='layer_3' id="layerDEFlayer1">POI 5
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-poi='PoiRodos'/>
+                          </div>
+
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Default Layer Panel -->
+                  <li class="has-submenu"><a href="#" data-tooltip aria-haspopup="true" class="has-tip" title="In this area you can activate general interest layers">Addon Layers</a>
+                    <ul class="left-submenu">
+                      <li class="back"><a href="#">Back</a></li>
+                      <li><label>Addon Layers</label></li>
+                      <li>
+                        <div class="panel radius">
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-layer='layerMuni' id="layerDEFlayer1" data-tooltip aria-haspopup="true" class="has-tip" title="This layer displays the urban areas">Urban structure
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-slider='layerMuni' />
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-layer='landuse' id="layerDEFlayer2" data-tooltip aria-haspopup="true" class="has-tip" title="This layer displays the land use">Landuse
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-slider='landuse'/>
+                          </div>
+                           <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-layer='layerGrid' id="layerDEFlayer10" data-tooltip aria-haspopup="true" class="has-tip" title="This layer displays a grid">Graticulate Frame
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-slider='layerGrid'/>
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-layer='national_road_network' id="layerDEFlayer3" data-tooltip aria-haspopup="true" class="has-tip" title="This layer displays the primary road network">Primary Road Network
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-slider='national_road_network' />
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-layer='rest_road_network' id="layerDEFlayer4" data-tooltip aria-haspopup="true" class="has-tip" title="This layer displays the rest road network">Rest Road Network
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-slider='rest_road_network' />
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-layer='water_elements' id="layerDEFlayer5" data-tooltip aria-haspopup="true" class="has-tip" title="This layer displays the water bodies">Water Elements
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-slider='water_elements' data-layer='PoiRodos' />
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-layer='natural' id="layerDEFlayer6" data-tooltip aria-haspopup="true" class="has-tip" title="This layer displays the nature beauty areas">Natural
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-slider='natural' />
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkCustom" data-layer='beach' id="layerDEFlayer7" data-tooltip aria-haspopup="true" class="has-tip" title="This layer displays the beaches">Beach
+                            <input id="slider1" type="range" min="0" max="100" step="10" data-slider='beach' />
+                          </div>
+                          
+
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- User Layers Panel -->
+                  <li class="has-submenu"><a href="#" data-tooltip aria-haspopup="true" class="has-tip" title="In this area you can activate the user-created layers">User Created Layers</a>
+                    <ul class="left-submenu">
+                      <li class="back"><a href="#">Back</a></li>
+                      <li><label>User Created Layers</label></li>
+                      <li>
+                        <div class="panel radius">
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkUSRlayer" id="layerUSRlayer1">Layer 1
+                            <input id="slider1" type="range" min="0" max="100" step="10" />
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkUSRlayer" id="layerUSRlayer2">Layer 2
+                            <input id="slider1" type="range" min="0" max="100" step="10" />
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkUSRlayer" id="layerUSRlayer3">Layer 3
+                            <input id="slider1" type="range" min="0" max="100" step="10" />
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkUSRlayer" id="layerUSRlayer4">Layer 4
+                            <input id="slider1" type="range" min="0" max="100" step="10" />
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkUSRlayer" id="layerUSRlayer5">Layer 5
+                            <input id="slider1" type="range" min="0" max="100" step="10" />
+                          </div>
+                          <div class="row collapse">
+                            <input type="checkbox" name="defaultLayer" class="checkUSRlayer" id="layerUSRlayer6">Layer 6
+                            <input id="slider1" type="range" min="0" max="100" step="10" />
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+    </aside>
+          <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                  <li><label>User Panel</label></li>
+
+                  <li class="">
+                    <div class="panel radius">
+                      <input type="text" placeholder="Username" id="loginUsername">
+                      <input type="text" placeholder="Password" id="loginPassword">
+                      <button id="loginSubmit" >Login</button>
+                    </div>
+                  </li>
+                  <!-- Register Panel -->
+                  <li class="has-submenu"><a href="#">Register</a>
+                    <ul class="right-submenu">
+                      <li class="back"><a href="#">Back</a></li>
+                      <li><label>Register</label></li>
+                      <li>
+                        <div class="panel radius">
+                          <input type="text" placeholder="Username" id="regUsername">
+                          <input type="text" placeholder="Password" id="regPassword">
+                          <input type="text" placeholder="user@mail.com" id="regMail">
+                          <input type="text" placeholder="Password" id="loginPassword">
+                          <button id="regSubmit" >Register</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Add POI Panel -->
+                  <li class="has-submenu"><a href="#">Add POI</a>
+                    <ul class="right-submenu">
+                      <li class="back"><a href="#">Back</a></li>
+                      <li><label>Level 1</label></li>
+                      <li><a href="#">Link 1</a></li>
+                      <li class="has-submenu"><a href="#">Link 2 w/ submenu</a>
+                        <ul class="right-submenu">
+                          <li class="back"><a href="#">Back</a></li>
+                          <li><label>Level 2</label></li>
+                          <li><a href="#">...</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">...</a></li>
+                    </ul>
+                  </li>
+                  <!-- Add Photos Panel -->
+                  <li class="has-submenu"><a href="#">Add Photo</a>
+                    <ul class="right-submenu">
+                      <li class="back"><a href="#">Back</a></li>
+                      <li><label>Level 1</label></li>
+                      <li><a href="#">Link 1</a></li>
+                      <li class="has-submenu"><a href="#">Link 2 w/ submenu</a>
+                        <ul class="right-submenu">
+                          <li class="back"><a href="#">Back</a></li>
+                          <li><label>Level 2</label></li>
+                          <li><a href="#">...</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">...</a></li>
+                    </ul>
+                  </li>
+                  <!-- Add Layer Panel -->
+                  <li class="has-submenu"><a href="#">Add Layer</a>
+                    <ul class="right-submenu">
+                      <li class="back"><a href="#">Back</a></li>
+                      <li><label>Level 1</label></li>
+                      <li><a href="#">Link 1</a></li>
+                      <li class="has-submenu"><a href="#">Link 2 w/ submenu</a>
+                        <ul class="right-submenu">
+                          <li class="back"><a href="#">Back</a></li>
+                          <li><label>Level 2</label></li>
+                          <li><a href="#">...</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">...</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="#">...</a></li>
+                </ul>
+              </aside>
+      <a class="exit-off-canvas"></a>
+    <!-- main content goes here -->
+    <div id="map" class="map"></div>
+
+  <!-- close the off-canvas menu -->
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+</div>
+    <script src="js/app.js"></script>
+    <script src="js/layerHandler.js"></script>
+    <script src="js/mapControls.js"></script>
+    <script src="js/requestHandler.js"></script>
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.offcanvas.js"></script>
+    <script src="js/foundation/foundation.tooltip.js"></script>
     <script>
       $(document).foundation();
     </script>
